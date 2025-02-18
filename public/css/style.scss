@@ -1,0 +1,1576 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// font-family: 'Poppins', sans-serif;
+
+*{
+    box-sizing: border-box;
+}
+body{margin: 0px; font-family: 'Poppins', sans-serif;}
+button:focus{outline: none;}
+input:focus{outline: none;}
+a{
+    color: #1b70bb;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+ul{
+	list-style: none;
+	padding-left: 0px;
+}
+
+/*#### Comon css start #####*/ 
+$prymaryColor:#FF7BAC;
+$secondaryColor:#6E3264;
+$paraColor:#848484;
+$blackColor:#000000;
+$whiteColor:#fff;
+$bgColor: #FFFEF6;
+
+@mixin positionProb{
+    position: relative;
+    width: 100%;
+}
+@mixin flexProb{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comon-title{
+    @include positionProb();
+    h3{
+        @include positionProb();
+        color: $secondaryColor;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    h4{
+        @include positionProb();
+        color: $blackColor;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+}
+.btn-danger{
+    background-color: $prymaryColor;
+    border-color: $prymaryColor;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border-radius: 30px;
+    &:hover, &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle{
+        background-color: $prymaryColor;
+        border-color: $prymaryColor;
+    }
+}
+.purple-btn{
+    background-color: $secondaryColor;
+    border-color: $secondaryColor;
+    font-size: 16px;
+    color: $whiteColor;
+    padding: 8px 15px;
+    border-radius: 30px;
+    &:hover{
+        color: $whiteColor;
+        background-color: $secondaryColor;
+        border-color: $secondaryColor;
+    }
+}
+
+/*#### Comon css end #####*/ 
+
+/*##### Header css start ####*/ 
+.header-wrapper{
+    @include positionProb();
+    background-color: $whiteColor;
+    z-index: 10;
+    .navbar .navbar-nav{
+        position: relative;
+        li{
+            position: relative;
+            padding: 0px 10px;
+            a{
+                color: $blackColor;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            &.active a{
+                color: $blackColor;
+            }
+        }
+    }
+    .my-ac-wrap{
+        position: relative;
+        > ul{
+            position: relative;
+            @include flexProb();
+            align-items: center;
+            margin-bottom: 0px;
+            > li{
+                position: relative;
+                padding-left: 20px;
+                a{
+                    color: $blackColor;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .sign-up .sign-up-btn{
+                    border: 1px solid $prymaryColor;
+                    display: inline-block;
+                    padding: 8px 15px;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+    // is login
+    .my-ac-wrap .head-user{
+        position: relative;
+        .dropdown-toggle{
+            position: relative;
+            @include flexProb();
+            align-items: center;
+            background-color: transparent;
+            border: 0px;
+            .user-icon{
+                position: relative;
+                width: 50px;
+                height: 50px;
+                border: 2px solid $secondaryColor;
+                border-radius: 50%;
+                overflow: hidden;
+                .img-profile{
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+            .profile-name{
+                position: relative;
+                padding-left: 5px;
+                h4{
+                    position: relative;
+                    color: $secondaryColor;
+                    font-size: 16px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .dropdown-menu{
+            
+            li{
+                @include positionProb();
+                a{
+                    font-size: 15px;
+                    color: $paraColor;
+                    font-weight: normal;
+                    &:hover{
+                        color: $secondaryColor;
+                    }
+                }
+            }
+        }
+    }
+}
+.hed-search{
+    position: relative;
+    input[type=search]{
+        padding: 10px 10px;
+        padding-left: 30px;
+        border: 0px;
+        border-bottom: 1px solid $blackColor;
+        &::placeholder{
+            color: #AC8FA8;
+        }
+    }
+    .search-btn{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+        line-height: normal;
+        border: 0;
+        background-color: transparent;
+        font-size: 20px;
+        color: #B76E79;
+    }
+}
+/*##### Header css end ####*/ 
+/*##### Banner css start #####*/ 
+.banner-wrapper{
+    @include positionProb();
+    .banner-content-wrap{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        .banner-content{
+            @include positionProb();
+            h3{
+                @include positionProb();
+                font-size: 60px;
+                color: $whiteColor;
+                margin-bottom: 20px;
+            }
+            .banner-btn{
+                @include positionProb();
+                @include flexProb();
+                li{
+                    margin-right: 10px;
+                    .btn-banner{
+                        position: relative;
+                        background-color: #B76E79;
+                        border-color: #B76E79;
+                        padding: 10px 15px;
+                        text-transform: uppercase;
+                        border-radius: 30px;
+                    }
+                    .btn-outline-banner{
+                        position: relative;
+                        border-color: #B76E79;
+                        padding: 10px 15px;
+                        text-transform: uppercase;
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*##### Banner css end #####*/ 
+
+/*##### designer knitted css start #####*/ 
+.designer-knitted-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+    background-color: $whiteColor;
+    overflow: hidden;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 6%;
+        top: 10%;
+        width: 88%;
+        height: 80%;
+        background-image: url(../images/designer-knitted-flower-img1.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: 0;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        right: -16%;
+        top: 65%;
+        transform: translateY(-50%);
+        width: 350px;
+        height: 250px;
+        background-image: url(../images/designer-knitted-shape.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: 1;
+    }
+}
+.designer-knitted-img {
+    @include positionProb();
+}
+.designer-knitted-right-content{
+    @include positionProb();
+    z-index: 2;
+    p{
+        @include positionProb();
+        color: $paraColor;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    h6{
+        @include positionProb();
+        margin-top: 10px;
+        color: #6E3264;
+        font-size: 15px;
+        a{
+            color: #6E3264;
+            text-decoration: underline;
+        }
+    }
+}
+/*##### designer knitted css end #####*/ 
+
+/*##### anything-store css start #####*/ 
+.anything-store-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+    background-color: $bgColor;
+    &::before{
+        content: "";
+        position: absolute;
+        left: -16%;
+        top: 65%;
+        transform: translateY(-50%);
+        width: 350px;
+        height: 280px;
+        background-image: url(../images/anything-store-shape.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: 1;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0%;
+        top: 10%;
+        width: 88%;
+        height: 80%;
+        background-image: url(../images/anything-store-flower-img.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        z-index: 0;
+    }
+}
+.anything-store-content{
+    @include positionProb();
+    z-index: 1;
+    p{
+        @include positionProb();
+        color: $paraColor;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+/*##### anything-store css end #####*/ 
+
+/*##### offer-items css start ######*/ 
+.offer-items-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+}
+.offer-items-img{
+    @include positionProb();
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/offer-items-flower-img.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+.offer-items-right-content{
+    @include positionProb();
+    p{
+        @include positionProb();
+        color: $paraColor;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+/*##### offer-items css end ######*/ 
+
+/*###### personal-meaningful css start ####*/ 
+.personal-meaningful-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+}
+.personal-meaningful-inner{
+    @include positionProb();
+    .personal-meaningful-content{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 2% 10%;
+        width: 100%;
+        .icon{
+            @include positionProb();
+            margin-bottom: 15px;
+        }
+        .comon-title h3{
+            padding-left: 10px;
+            border-left: 3px solid #FF7BAC;
+            color: $whiteColor;
+            margin-bottom: 15px;
+        }
+        .comon-title p{
+            @include positionProb();
+            color: $whiteColor;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}
+/*###### personal-meaningful css end ####*/ 
+
+/*###### congratulations section css start ######*/ 
+.congratulations-wrapper{
+    @include positionProb();
+    padding: 0px 0px;
+    .gallery-items{
+        position: relative;
+        padding: 5px 5px;
+    }
+}
+.congratulations-content{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    background-color: $prymaryColor;
+    padding: 30px 30px;
+    text-align: center;
+    h3{
+        @include positionProb();
+        color: $whiteColor;
+        text-transform: uppercase;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    p{
+        @include positionProb();
+        color: $whiteColor;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
+/*###### congratulations section css end ######*/ 
+
+/*###### customer-testimonials css start ######*/ 
+.customer-testimonials-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+    .comon-title h3{
+        color: $blackColor;
+    }
+}
+
+#testimonials-slider .testimonials-items{
+    position: relative;
+    padding: 12px 15px;
+}
+.testimonials-wrap{
+    position: relative;
+    width: 100%;
+    padding: 15px 15px;
+    box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    overflow: hidden;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70px;
+        height: 60px;
+        background-color: $prymaryColor;
+        border-radius: 5px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        background-image: url(../images/gray-quotes-img.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .testi-top{
+        @include positionProb();
+        @include flexProb();
+        align-items: center;
+        margin-bottom: 15px;
+        .left-img{
+            position: relative;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .auth-details{
+            position: relative;
+            width: calc(100% - 90px);
+            padding-left: 10px;
+            h4{
+                @include positionProb();
+                color: $blackColor;
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+            h5{
+                @include positionProb();
+                color: $prymaryColor;
+                font-size: 16px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .content-wrap{
+        @include positionProb();
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background-image: url(../images/pink-quotes-img1.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 25px;
+            height: 25px;
+            background-image: url(../images/pink-quotes-img1.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        p{
+            @include positionProb();
+            color: $paraColor;
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// arrow css
+#testimonials-slider .slick-arrow {
+    z-index: 9;
+    border: 0;
+    color: $whiteColor;
+    background-color: $prymaryColor;
+    border: 1px solid $prymaryColor;
+    font-size: 20px;
+    transition: 0.5s;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgb(0 0 0 / 8%);
+}
+#testimonials-slider .slick-arrow:hover {
+    color: $secondaryColor;
+    background-color: $whiteColor;
+    border-color: $whiteColor;
+    transition: 0.5s;
+}
+#testimonials-slider .slick-arrow.slick-prev {
+    position: absolute;
+    left: -3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#testimonials-slider .slick-arrow.slick-next {
+    position: absolute;
+    right: -3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*###### customer-testimonials css end ######*/ 
+
+/*###### Wishlist section css start ######*/ 
+.wishlist-wrapper{
+    @include positionProb();
+}
+.wishlist-left{
+    @include positionProb();
+}
+.create-wishlist-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    left: 20%;
+    background-color: $whiteColor;
+    padding: 30px 30px;
+    p{
+        @include positionProb();
+        color: $paraColor;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+.wishlist-right{
+    @include positionProb();
+}
+/*###### Wishlist section css end ######*/ 
+
+/*###### Footer css start ######*/ 
+.footer-wrapper{
+    @include positionProb();
+    padding-top: 50px;
+    background-color: $secondaryColor;
+}
+.footer-inner-wrap{
+    @include positionProb();
+    height: 100%;
+    border-right: 1px solid #82567B;
+    h3{
+        @include positionProb();
+        color: $whiteColor;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .footer-menu{
+        @include positionProb();
+        ul{
+            @include positionProb();
+            margin: 0px;
+            li{
+                @include positionProb();
+                padding: 5px 0px;
+                a{
+                    color: #DBC4D7;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+.footer-social-wrap{
+    @include positionProb();
+    border-top: 1px solid #82567B;
+    padding-top: 30px;
+    .social-icon{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0px;
+        li{
+            position: relative;
+            padding: 0px 10px;
+            display: inline-flex;
+            a{
+                color: $whiteColor;
+                font-size: 20px;
+            }
+        }
+    }
+}
+.footer-wrapper .col-12.col-md-6:nth-child(4) .footer-inner-wrap{
+    border-right: 0px;
+}
+.footer-copright{
+    @include positionProb();
+    text-align: center;
+    padding: 20px 0px;
+    p{
+        @include positionProb();
+        color: #B17BA8;
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+}
+/*###### Footer css end ######*/ 
+
+/*###### login css start ####*/ 
+.login-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+}
+.login-wrap{
+    @include positionProb();
+    box-shadow: 0px 3px 20px rgb(0 0 0 / 12%);
+    padding: 20px 20px;
+    h3{
+        @include positionProb();
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .form-group{
+        @include positionProb();
+        label{
+            @include positionProb();
+            color: $blackColor;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .form-control{
+            @include positionProb();
+            border-radius: 0px;
+            border: 1px solid $paraColor;
+            transition: 0.5s;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+                border: 1px solid $secondaryColor;
+                transition: 0.5s;
+            }
+        }
+
+    }
+    .login-submit-btn {
+        margin-bottom: 10px;
+        .purple-btn{
+            width: 100%;
+        }
+    }
+    .lost_password{
+        @include positionProb();
+        p{
+            @include positionProb();
+            margin-bottom: 5px;
+        }
+        a{
+            color: $secondaryColor;
+        }
+    }
+}
+/*###### login css end ####*/ 
+
+/*###### find registry css start ########*/ 
+.find-registry-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+    background-image: url(../images/anything-store-flower-img.png);
+    background-repeat: repeat;
+    background-color: $bgColor;
+}
+
+.search-registry-wrap{
+    @include positionProb();
+    .form-control{
+        @include positionProb();
+        border: 1px solid $paraColor;
+        border-radius: 30px;
+        padding: 12px 15px;
+        padding-left: 40px;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .search-btn{
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        font-size: 25px;
+        color: $secondaryColor;
+    }
+}
+
+.find-table-headers{
+    background: $secondaryColor;
+    border-radius: 8px 8px 0 0;
+    color: #ffffff;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40px 1fr [3];
+    grid-template-columns: 40px repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 0 40px 0 10px;
+    .tiny{
+        margin-bottom: 0px;
+        padding: 10px 0px;
+    }
+}
+.results-container {
+    background: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40px 1fr [3];
+    grid-template-columns: 40px repeat(3, 1fr);
+    -ms-grid-rows: minmax(0px, auto) [2];
+    grid-template-rows: repeat(2, minmax(0px, auto));
+    grid-column-gap: 10px;
+    grid-template-areas:
+        'avatar name name date'
+        'avatar city city date';
+    padding: 10px 40px 10px 10px;
+    position: relative;
+    align-items: center;
+    .grid-item{
+        color: #757575;
+        font-size: 15px;
+    }
+    .find-avatar{
+        background: rgba(110,50,100,0.1);
+        border-radius: 20px;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    &::after{
+        content: "\f105";
+        font-family: fontawesome;
+        position: absolute;
+        right: 8px;
+        color: #757575;
+    }
+}
+/*###### find registry css end ########*/ 
+/*##### Find registry details css start #####*/ 
+.find-registry-top{
+    @include positionProb();
+    padding: 30px 0px;
+    background-color: $bgColor;
+    .find-name{
+        @include positionProb();
+        h3{
+            @include positionProb();
+            color: $blackColor;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        p{
+            @include positionProb();
+            color: $paraColor;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.find-registry-details-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+}
+.filter-wrapper{
+    @include positionProb();
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    > ul{
+        @include positionProb();
+        @include flexProb();
+        margin-bottom: 0px;
+        > li{
+            margin-right: 10px;
+        }
+    }
+}
+
+.product-accordion{
+    @include positionProb();
+    border: 0px;
+    .accordion-item{
+        border: 0px;
+        .accordion-button{
+            background-color: transparent;
+            color: $blackColor;
+            font-size: 20px;
+        }
+    }
+}
+
+.product-list{
+    @include positionProb();
+    .product-img{
+        @include positionProb();
+        img{
+            @include positionProb();
+        }
+    }
+    .product-name{
+        @include positionProb();
+        h4{
+            @include positionProb();
+            color: $blackColor;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/*##### Find registry details css end #####*/ 
+
+/*###### my profile build registry ######*/ 
+
+/*####### Comon check box css start ####*/ 
+.comon-checkbox-group {
+    display: block;
+    margin-bottom: 15px;
+}
+  
+.comon-checkbox-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+  
+  .comon-checkbox-group label {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .comon-checkbox-group label:before {
+    content:'';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #d3d3d3;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .comon-checkbox-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid $secondaryColor;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+.comon-checkbox-group input:checked + label:before{
+    border-color: $secondaryColor;
+}
+/*####### Comon check box css end ####*/ 
+
+
+.my-profile-registry-wrapper{
+    @include positionProb();
+    padding: 60px 0px;
+}
+
+
+.registry-sidebar{
+    @include positionProb();
+    .registry-user-container{
+        @include positionProb();
+        @include flexProb();
+        margin-bottom: 25px;
+        align-items: center;
+        .user-img{
+            position: relative;
+            width: 90px;
+            height: 90px;
+            border: 1px solid $secondaryColor;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .user-name{
+            position: relative;
+            padding-left: 10px;
+            h4{
+                @include positionProb();
+                color: $blackColor;
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            p{
+                @include positionProb();
+                color: $paraColor;
+                font-size: 15px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .switch-registry-wrap{
+        @include positionProb();
+        margin-bottom: 25px;
+        h4{
+            @include positionProb();
+            color: $blackColor;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .dropdown{
+            @include positionProb();
+            .dropdown-toggle{
+                @include positionProb();
+                background-color: transparent;
+                padding: 10px 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            .dropdown-menu{
+                width: 100%;
+                padding: 15px 15px;
+                li{
+                    @include positionProb();
+                    a{
+                        color: $secondaryColor;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .your-wishlist-link-wrap{
+            @include positionProb();
+            padding-right: 30px;
+            #wishlist-link{
+                font-size: 15px;
+                color: $blackColor;
+            }
+            .link-copy-btn{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                background-color: transparent;
+                color: $secondaryColor;
+                border: 0px;
+                padding: 0px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .sidemenu{
+        @include positionProb();
+        margin-bottom: 25px;
+        ul{
+            @include positionProb();
+            margin-bottom: 0px;
+            li{
+                @include positionProb();
+                padding: 6px 0px;
+                &.active a{
+                    color: $secondaryColor;
+                }
+                a{
+                    color: $paraColor;
+                    transition: 0.5s;
+                    &:hover{
+                        color: $secondaryColor;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+
+    .price-filter{
+        @include positionProb();
+        margin-bottom: 25px;
+        h4{
+            @include positionProb();
+            color: #000000;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        ul{
+            @include positionProb();
+            margin-bottom: 0px;
+            li{
+                @include positionProb();
+                padding: 5px 0px;
+            }
+        }
+    }
+    .gift-added{
+        @include positionProb();
+        margin-bottom: 15px;
+        h4{
+            @include positionProb();
+            color: #000000;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .add-number{
+            @include positionProb();
+            h5{
+                @include positionProb();
+                color: $secondaryColor;
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+
+.my-registry-right-wrap{
+    @include positionProb();
+
+}
+
+.setup-goals-list{
+    @include positionProb();
+    background-color: $whiteColor;
+    box-shadow: 0px 3px 15px rgb(0 0 0 / 20%);
+    border-radius: 3px;
+    button{
+        @include positionProb();
+        @include flexProb();
+        align-items: center;
+        padding: 20px 15px;
+        background-color: transparent;
+        border: 0px;
+        .icon{
+            position: relative;
+            width: 50px;
+        }
+        .setup-goals-text{
+            width: calc(100% - 80px);
+            padding: 0px 5px;
+            font-size: 15px;
+        }
+        .right-arrow{
+            position: relative;
+            width: 30px;
+            font-size: 20px;
+            color: $paraColor;
+        }
+    }
+}
+
+
+.add-product-list{
+    @include positionProb();
+    background-color: $whiteColor;
+    box-shadow: 0px 3px 15px rgb(0 0 0 / 21%);
+    border-radius: 5px;
+    overflow: hidden;
+    .prd-img{
+        @include positionProb();
+        img{
+            @include positionProb();
+        }
+    }
+    .product-content{
+        @include positionProb();
+        padding: 10px 10px;
+        h3{
+            @include positionProb();
+            color: $secondaryColor;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        h4{
+            @include positionProb();
+            color: $blackColor;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .prd-buy-from{
+            @include positionProb();
+            @include flexProb();
+            justify-content: space-between;
+            align-items: center;
+            .price-buy-from{
+                position: relative;
+                width: calc(100% - 40px);
+                padding-right: 5px;
+                .buy-from-list{
+                    position: relative;
+                    margin-bottom: 10px;
+                    ul{
+                        @include positionProb();
+                        @include flexProb();
+                        margin-bottom: 0px;
+                        li{
+                            position: relative;
+                            img{
+                                position: relative;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+                h5{
+                    @include positionProb();
+                    color: $blackColor;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 0px;
+                }
+            }
+            .add-btn-wrap{
+                position: relative;
+                width: 40px;
+                .purple-btn{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    padding: 0px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+/*#### View wishlist css start #####*/ 
+.my-registry-right-wrap .comon-title p{
+    font-size: 14px;
+}
+.my-registry-right-wrap .comon-title .private-popup-btn{
+    position: relative;
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    margin-bottom: 5px;
+    font-size: 14px;
+    span{
+        color: $prymaryColor;
+    }
+}
+
+
+.wishlist-product-wrap{
+    @include positionProb();
+    > h3{
+        @include positionProb();
+        color: $blackColor;
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}
+.wishlist-product-list{
+    @include positionProb();
+    margin-bottom: 20px;
+    .product-img{
+        @include positionProb();
+        img{
+            @include positionProb();
+        }
+    }
+    .product-content{
+        @include positionProb();
+        h3{
+            @include positionProb();
+            color: $secondaryColor;
+            font-size: 18px;
+            font-weight: 500;
+            a{
+                color: $secondaryColor;
+            }
+        }
+        .mtm{
+            @include positionProb();
+            .mtm-list{
+                @include positionProb();
+                margin-bottom: 5px;
+                .offer-layout-wrap{
+                    @include positionProb();
+                    @include flexProb();
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 3px 3px;
+                    .icon{
+                        position: relative;
+                        .icon-img{
+                            position: relative;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            margin-right: 5px;
+                        }
+                        span{
+                            color: $blackColor;
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                    }
+                    .offer-price{
+                        color: $blackColor;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .wishlist-button-wrap{
+        @include positionProb();
+        ul{
+            @include positionProb();
+            @include flexProb();
+            justify-content: flex-end;
+            margin-bottom: 0px;
+            li{
+                position: relative;
+                margin-left: 10px;
+                .edit-btn{
+                    position: relative;
+                    display: inline-block;
+                    padding: 10px 25px;
+                    font-size: 18px;
+                    background-color: $secondaryColor;
+                    color: $whiteColor;
+                    border-radius: 30px;
+                    margin-bottom: 5px;
+                }
+                .delete-btn{
+                    position: relative;
+                    display: inline-block;
+                    padding: 10px 25px;
+                    font-size: 18px;
+                    border: 1px solid $secondaryColor;
+                    background-color: transparent;
+                    color: $secondaryColor;
+                    border-radius: 30px;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: $secondaryColor;
+                        color: $whiteColor;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+/*#### View wishlist css end #####*/ 
+
+
+/*popup css start*/ 
+
+/*View wishlist*/ 
+#wishlist_private_Modal .your-wishlist-link-wrap{
+    @include positionProb();
+    background-color: #eeeeee;
+    border: 1px solid #ddd;
+    .wishlist-link{
+        padding: 10px 10px;
+        padding-right: 30px;
+        color: $blackColor;
+        font-size: 15px;
+    }
+    .link-copy-btn{
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: 0px;
+        font-size: 20px;
+        color: $secondaryColor;
+        padding: 0px;
+    }
+}
+#wishlist_private_Modal .public-private-radio{
+    @include positionProb();
+    .form-check{
+        @include positionProb();
+        margin-bottom: 10px;
+        .form-check-label{
+            h5{
+                @include positionProb();
+                color: $blackColor;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            p{
+                @include positionProb();
+                color: $paraColor;
+                font-size: 15px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+/*View wishlist*/ 
+
+.ship-form-wrap{
+    @include positionProb();
+    .form-group{
+        @include positionProb();
+        label{
+            position: relative;
+            width: 100%;
+            color: $paraColor;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .form-control, .form-select{
+            @include positionProb();
+            border-radius: 0px;
+            padding: 10px 10px;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+                border-color: $secondaryColor;
+            }
+        }
+    }
+}
+
+.greeting-photo-uploader{
+    position: relative;
+}
+.greeting-photo-uploader .greeting-choose-file [type="file"]{
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+.greeting-photo-uploader .greeting-choose-file [type="file"] + label{
+    background: #ffffff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: middle;
+}
+
+.greeting-upload-right{
+    @include positionProb();
+    height: 100%;
+    background-color: #f9f9f9;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 15px;
+    text-align: center;
+    h5{
+        @include positionProb();
+        color: $paraColor;
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+/*popup css end*/ 
+
+/*#### gift-tracker css start #####*/ 
+.gift-tracker-wrap{
+    @include positionProb();
+}
+.gift-tracker-list{
+    @include positionProb();
+    .accordion-header .accordion-button{
+        padding: 0px;
+        background: transparent;
+        padding-bottom: 10px;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .gift-tracker-head{
+        @include positionProb();
+        @include flexProb();
+        align-items: center;
+        padding-right: 10px;
+        .gift-user-name{
+            position: relative;
+            width: calc(100% - 60px);
+            h4{
+                @include positionProb();
+                color: $blackColor;
+                font-size: 20px;
+                margin-bottom: 3px;
+            }
+            p{
+                @include positionProb();
+                color: $paraColor;
+                font-size: 15px;
+                margin-bottom: 0px;
+            }
+        }
+        .order-count{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            background-color: $secondaryColor;
+            padding: 5px 10px;
+            border-radius: 50%;
+            color: $whiteColor;
+            @include flexProb();
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    .gift-tracker-body{
+        @include positionProb();
+        padding: 15px 15px;
+        box-shadow: 0px 3px 15px rgb(0 0 0 / 30%);
+        margin-top: 15px;
+        border-radius: 5px;
+        .gift-tracker-body-header{
+            @include flexProb();
+            margin-bottom: 15px;
+            .left-img{
+                position: relative;
+                width: 150px;
+            }
+            .gift-right-details{
+                position: relative;
+                width: calc(100% - 150px);
+                padding-left: 15px;
+                h4{
+                    @include positionProb();
+                    color: $blackColor;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    @include positionProb();
+                    color: $paraColor;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+/*#### gift-tracker css end #####*/ 
+
+/*###### my profile build registry css end######*/ 
+
+/*##### Setting page css start ######*/ 
+.setting-form-wrap{
+    @include positionProb();
+    .form-group{
+        @include positionProb();
+        label{
+            @include positionProb();
+            color: #848484;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .form-control, .form-select{
+            @include positionProb();
+            border-radius: 0px;
+            padding: 10px 10px;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+                border-color: #6E3264;
+            }
+        }
+    }
+}
+/*##### Setting page css end ######*/ 
